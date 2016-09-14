@@ -2,8 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Timeline
-    %meta{ charset: "UTF-8" }
+    %title #TravelPlans
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = stylesheet_link_tag    'http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700'
@@ -12,9 +11,10 @@
   %body
 
     %header 
-      = image_tag("cd-icon-movie.svg")
-      = image_tag("cd-icon-location.svg")
-      = image_tag("cd-icon-picture.svg")
+      %h1 #{'#TravelPlans'}
+      -# = image_tag("cd-icon-movie.svg")
+      -# = image_tag("cd-icon-location.svg")
+      -# = image_tag("cd-icon-picture.svg")
 
     = yield
 
