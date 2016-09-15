@@ -1,8 +1,10 @@
 %section.cd-container#cd-timeline
-  .cd-timeline-block
-    .cd-timeline-img.cd-location
-      = image_tag("cd-icon-location.svg")
+  - timelines.each do |timeline|
+    .cd-timeline-block
+      .cd-timeline-img{ class: "#{check_state(timeline.date)}" }
+        = image_tag("cd-icon-location.svg")
 
-    .cd-timeline-content
-      %h2 Isla de Gigantes Islands
-      %span.cd-date Jan 14
+      .cd-timeline-content
+        %h2 #{timeline.name}
+
+        %span.cd-date #{timeline.render_date}

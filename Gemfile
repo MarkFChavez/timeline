@@ -13,6 +13,9 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'haml-rails'
 
+gem 'pry'
+gem 'pry-rails'
+
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
