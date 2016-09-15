@@ -27,7 +27,7 @@ namespace :populate_events do
     )
 
     Event.create!(
-      name: "Puerto Prinsesa (3D2N)",
+      name: "Puerto Prinsesa (4D3N)",
       start_date: Date.parse("September 23, 2016"),
       end_date: Date.parse("September 26, 2016")
     )
