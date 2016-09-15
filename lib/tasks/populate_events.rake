@@ -31,6 +31,12 @@ namespace :populate_events do
       start_date: Date.parse("September 23, 2016"),
       end_date: Date.parse("September 26, 2016")
     )
+
+    Event.create!(
+      name: "CAWAG Quadrilogy Day Hike (2D1N)",
+      start_date: Date.parse("July 30, 2016"),
+      end_date: Date.parse("July 31, 2016")
+    )
   end
 
   def remove_all_events
