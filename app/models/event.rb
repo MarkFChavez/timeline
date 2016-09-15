@@ -1,13 +1,8 @@
-class Event
-  attr_reader :name, :date, :date_display
+class Event < ActiveRecord::Base
+  validates :name, presence: true
+  validates :start_date, :end_date, presence: true
 
-  def initialize(opts = {})
-    @name = opts[:name]
-    @date = opts[:date]
-    @date_display = opts[:date_display]
-  end
-
-  def decorate
-    EventDecorator.new(self)
+  def self.by_date
+    order(start_date: :desc)
   end
 end

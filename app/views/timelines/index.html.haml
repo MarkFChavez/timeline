@@ -1,10 +1,11 @@
-%section.cd-container#cd-timeline
-  - timelines.each do |timeline|
-    .cd-timeline-block
-      .cd-timeline-img{ class: "#{check_state(timeline.date)}" }
-        = image_tag("cd-icon-location.svg")
+- if timelines.any?
+  %section.cd-container#cd-timeline
+    - timelines.each do |event|
+      .cd-timeline-block
+        .cd-timeline-img{ class: "#{check_state(event.start_date)}" }
+          = image_tag("cd-icon-location.svg")
 
-      .cd-timeline-content
-        %h2 #{timeline.name}
+        .cd-timeline-content
+          %h2 #{event.name}
 
-        %span.cd-date #{timeline.date_display || timeline.render_date}
+          %span.cd-date #{event.start_date.strftime("%B %d")}
