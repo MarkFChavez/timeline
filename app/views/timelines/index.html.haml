@@ -8,4 +8,9 @@
         .cd-timeline-content
           %h2 #{event.name}
 
-          %span.cd-date #{event.start_date.strftime("%B %d")}
+          %span.cd-date 
+            - if event.one_day?
+              #{event.start_date.strftime("%B %d, %Y")}
+            - else
+              #{event.start_date.strftime("%B %d")} - #{event.end_date.strftime("%d, %Y")}
+

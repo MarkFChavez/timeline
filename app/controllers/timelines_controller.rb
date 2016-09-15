@@ -6,6 +6,6 @@ class TimelinesController < ApplicationController
   private
 
   def timelines
-    Event.by_date
+    Event.latest_by_date
   end
 end
