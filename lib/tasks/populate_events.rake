@@ -37,6 +37,12 @@ namespace :populate_events do
       start_date: Date.parse("July 30, 2016"),
       end_date: Date.parse("July 31, 2016")
     )
+
+    Event.create!(
+      name: "Roxas City, Capiz (3D2N)",
+      start_date: Date.parse("October 27, 2016"),
+      end_date: Date.parse("October 29, 2016")
+    )
   end
 
   def remove_all_events
